@@ -1,0 +1,16 @@
+{
+  "preset": "jest-expo",
+  "setupFilesAfterEnv": ["<rootDir>/src/__tests__/setup.ts"],
+  "testMatch": [
+    "**/__tests__/**/*.ts?(x)",
+    "**/*.(test|spec).ts?(x)"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.{ts,tsx}",
+    "!src/**/*.d.ts",
+    "!src/__tests__/**/*"
+  ],
+  "moduleNameMapping": {
+    "^@/(.*)$": "<rootDir>/src/$1"
+  }
+}
