@@ -1,7 +1,7 @@
-import { ConfigPlugin, withInfoPlist, withEntitlementsPlist } from '@expo/config-plugins';
-import { ExpoConfig } from '@expo/config-types';
+import { withInfoPlist, withEntitlementsPlist } from '@expo/config-plugins';
+import type { ExpoConfig } from '@expo/config-types';
 
-const withDeviceUsageCapabilities: ConfigPlugin = (config) => {
+const withDeviceUsageCapabilities = (config: ExpoConfig) => {
   // Add entitlements
   config = withEntitlementsPlist(config, (config) => {
     config.modResults = {
